@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  #title-screen {
+    margin-top: 100px;
+    padding: 50px;
+  }
+  #title-screen h1 {
+    padding: 100px;
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    padding: 50px;
+}
+#title-screen h1,
+#title-screen p,
+#controls-modal h2 {
+  font-family: 'Press Start 2P', monospace;
+}
+
+  .controls {
+    padding: 10px;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  #game {
+    width: 400px;
+    height: 600px;
+    background: #000;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+  }
+  
+  #player {
+    width: 50px;
+    height: 30px;
+    background: lime;
+    position: absolute;
+    bottom: 10px;
+    left: 175px;
+  }
+  
+  .bullet {
+    width: 5px;
+    height: 15px;
+    background: yellow;
+    position: absolute;
+  }
+  
+  .enemy {
+  width: 50px;  /* was 30px */
+  height: 50px; /* was 30px */
+  position: absolute;
+  top: 0;
+}
+
+  
+  #countdown {
+    font-size: 48px;
+    color: yellow;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none;
+  }
+  
+  #game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .game-over-content {
+    text-align: center;
+    background: #222;
+    padding: 30px;
+    border: 2px solid red;
+    border-radius: 12px;
+  }
+  #difficulty{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #restartBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #startBtn,#controlsBtn{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  #pauseBtn,#stopBtn {
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 14px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .modal-content {
+    background-color: #222;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .explosion {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  pointer-events: none; /* to prevent interaction */
+}
+#player, .enemy, .bullet {
+  position: absolute;
+  z-index: 1;
+}
+
+#game {
+  position: relative;
+  background: black;
+  overflow: hidden;
+  /* existing styles */
+}
+
